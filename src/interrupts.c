@@ -174,7 +174,7 @@ const unsigned char Xthal_excm_level = XCHAL_EXCM_LEVEL;
 #elif defined(__SPLIT__intlevel_mask)
 
 // mask of interrupts at each intlevel
-const unsigned Xthal_intlevel_mask[16] = { 
+const unsigned Xthal_intlevel_mask[16] = {
     XCHAL_INTLEVEL_MASKS
 };
 
@@ -182,7 +182,7 @@ const unsigned Xthal_intlevel_mask[16] = {
 #elif defined(__SPLIT__intlevel_andbelow_mask)
 
 // mask for level 1 to N interrupts
-const unsigned Xthal_intlevel_andbelow_mask[16] = { 
+const unsigned Xthal_intlevel_andbelow_mask[16] = {
     XCHAL_INTLEVEL_ANDBELOW_MASKS
 };
 
@@ -190,7 +190,7 @@ const unsigned Xthal_intlevel_andbelow_mask[16] = {
 #elif defined(__SPLIT__intlevel)
 
 // level per interrupt
-const unsigned char Xthal_intlevel[32] = { 
+const unsigned char Xthal_intlevel[32] = {
     XCHAL_INT_LEVELS
 };
 
@@ -213,7 +213,7 @@ const unsigned Xthal_inttype_mask[XTHAL_MAX_INTTYPES] = {
 #elif defined(__SPLIT__timer_interrupt)
 
 // interrupts assigned to each timer (CCOMPARE0 to CCOMPARE3), -1 if unassigned
-const int Xthal_timer_interrupt[XTHAL_MAX_TIMERS] = { 
+const int Xthal_timer_interrupt[XTHAL_MAX_TIMERS] = {
     XCHAL_TIMER_INTERRUPTS
 };
 

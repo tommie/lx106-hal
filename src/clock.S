@@ -1,4 +1,4 @@
-// 
+//
 // clock.S - assembly language clock routines
 //
 // $Id: //depot/rel/Boreal/Xtensa/OS/hal/clock.S#2 $

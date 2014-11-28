@@ -357,7 +357,7 @@
  *  the call to the spilling function.
  *
  *  Example usage:
- *	
+ *
  *		.text
  *		.align	4
  *		.global	some_function
@@ -557,7 +557,7 @@
  *  macro implements version of beqi for arbitrary 32-bit immediate value
  *
  *     beqi32 ax, ay, imm32, label
- * 
+ *
  *  Compares value in register ax with imm32 value and jumps to label if
  *  equal. Clobbers register ay if needed
  *
@@ -572,7 +572,7 @@
         .ifeq (\imm)		// 0 ?
 		beqz	\ax, \label
         .else
-		//  We could also handle immediates 10,12,16,32,64,128,256 
+		//  We could also handle immediates 10,12,16,32,64,128,256
 		//  but it would be a long macro...
 		movi	\ay, \imm
 		beq	\ax, \ay, \label
@@ -607,14 +607,14 @@
  *
  *  implements abs on machines that do not have it configured
  */
-	
+
 #if !XCHAL_HAVE_ABS
 	.macro abs arr, ars
 	.ifc \arr, \ars
 	//src equal dest is less efficient
 	bgez \arr, 1f
 	neg \arr, \arr
-1:	
+1:
 	.else
 	neg \arr, \ars
 	movgez \arr, \ars, \ars
@@ -625,9 +625,9 @@
 
 /*----------------------------------------------------------------------
  *  addx2
- *  
+ *
  *  implements addx2 on machines that do not have it configured
- *     
+ *
  */
 
 #if !XCHAL_HAVE_ADDX
@@ -649,14 +649,14 @@
 	.endif
 	.endm
 #endif /* !XCHAL_HAVE_ADDX */
-	
+
 /*----------------------------------------------------------------------
  *  addx4
- * 
+ *
  *  implements addx4 on machines that do not have it configured
  *
  */
-	
+
 #if !XCHAL_HAVE_ADDX
 	.macro addx4 arr, ars, art
 	.ifc \arr, \art
@@ -682,9 +682,9 @@
 
 /*----------------------------------------------------------------------
  *  addx8
- * 
+ *
  *  implements addx8 on machines that do not have it configured
- * 
+ *
  */
 
 #if !XCHAL_HAVE_ADDX
@@ -717,7 +717,7 @@
 
 /*----------------------------------------------------------------------
  *  rfe_rfue
- * 
+ *
  *  Maps to RFUE on XEA1, and RFE on XEA2.  No mapping on XEAX.
  */
 
@@ -730,11 +730,11 @@
 	rfe
 	.endm
 #endif
- 
+
 
 /*----------------------------------------------------------------------
  *  abi_entry
- * 
+ *
  *  Generate proper function entry sequence for the current ABI
  *  (windowed or call0).  Takes care of allocating stack space (up to 1kB)
  *  and saving the return PC, if necessary.  The corresponding abi_return
@@ -868,7 +868,7 @@
 
 /*----------------------------------------------------------------------
  *  abi_return
- * 
+ *
  *  Generate proper function exit sequence for the current ABI
  *  (windowed or call0).  Takes care of freeing stack space and
  *  restoring the return PC, if necessary.

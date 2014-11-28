@@ -1,4 +1,4 @@
-// 
+//
 // cache_asm.S - assembly language cache management routines
 //
 // $Id: //depot/rel/Boreal/Xtensa/OS/hal/cache_asm.S#2 $
@@ -853,7 +853,7 @@ SYMBOL(xthal_cache_coherence_on)
 	abi_entry
 	cache_coherence_on	a2, a3
 	abi_return
-	
+
 #elif defined(__SPLIT__cache_coherence_on_nw)
 
 // void xthal_cache_coherence_on_nw(void)
@@ -861,7 +861,7 @@ SYMBOL(xthal_cache_coherence_on)
 SYM(xthal_cache_coherence_on_nw)
 	cache_coherence_on	a2, a3
 	ret
-	
+
 #elif defined(__SPLIT__cache_coherence_off)
 
 // The coherence_off routines should not normally be called directly.
@@ -874,7 +874,7 @@ SYMBOL(xthal_cache_coherence_off)
 	abi_entry
 	cache_coherence_off	a2, a3
 	abi_return
-	
+
 #elif defined(__SPLIT__cache_coherence_off_nw)
 
 // void xthal_cache_coherence_on_nw
@@ -906,7 +906,7 @@ SYMBOL(xthal_set_cache_prefetch)
 	movi	a2, 0
 # endif
 	abi_return
-	
+
 #elif defined(__SPLIT__set_cache_prefetch_nw)
 
 // int  xthal_set_cache_prefetch_nw( int )
@@ -920,7 +920,7 @@ SYM(xthal_set_cache_prefetch_nw)
 	movi	a2, 0
 # endif
 	ret
-	
+
 #elif defined(__SPLIT__get_cache_prefetch)
 
 // Return current cache prefetch state.
@@ -935,7 +935,7 @@ SYMBOL(xthal_get_cache_prefetch)
 	movi	a2, 0
 # endif
 	abi_return
-	
+
 #elif defined(__SPLIT__get_cache_prefetch_nw)
 
 // int  xthal_get_cache_prefetch_nw( void )
@@ -951,7 +951,7 @@ SYM(xthal_get_cache_prefetch_nw)
 //----------------------------------------------------------------------
 // Misc configuration info
 //----------------------------------------------------------------------
-	
+
 // Eventually these will move to their own file:
 #elif defined(__SPLIT__hw_configid0)
 	.set	xthals_hw_configid0, XCHAL_HW_CONFIGID0

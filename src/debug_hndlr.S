@@ -1,4 +1,4 @@
-// 
+//
 // debug_hndlr.S -- default Xtensa debug exception handler
 //
 // $Id: //depot/rel/Boreal/Xtensa/OS/hal/debug_hndlr.S#2 $

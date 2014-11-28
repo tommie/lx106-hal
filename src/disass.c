@@ -1,4 +1,4 @@
-// 
+//
 // disass.c - disassembly routines for Xtensa
 //
 // $Id: //depot/rel/Boreal/Xtensa/OS/hal/disass.c#2 $
@@ -55,7 +55,7 @@ int xthal_disassemble_size( unsigned char *instr_buf )
  *  Note:  we make sure to avoid the use of library functions,
  *  to minimize dependencies.
  */
-int xthal_disassemble( 
+int xthal_disassemble(
     unsigned char *instr_buffer, /* the address of the instructions */
     void *tgt_address,		 /* where the instruction is to be */
     char *buffer,		 /* where the result goes */

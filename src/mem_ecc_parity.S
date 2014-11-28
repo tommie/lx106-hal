@@ -1,4 +1,4 @@
-// 
+//
 // mem_ecc_parity.S - utility routines for the local memory ECC/parity option
 //			(memory error checking and exceptions)
 //

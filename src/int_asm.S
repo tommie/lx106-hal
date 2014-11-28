@@ -1,4 +1,4 @@
-// 
+//
 // int_asm.S - assembly language interrupt utility routines
 //
 // $Id: //depot/rel/Boreal/Xtensa/OS/hal/int_asm.S#2 $
@@ -600,7 +600,7 @@ xthal_vpri_lock:
 	//interlock
 	l8ui	a3, a2, XTHAL_VPRI_VPRI_OFS	// a3 := Xthal_vpri_level == Xthal_vpri_state.vpri
 	l8ui	a5, a2, XTHAL_VPRI_LOCKLEVEL_OFS  // a5 := Xthal_vpri_locklevel
-	l32i	a4, a2, XTHAL_VPRI_ENABLED_OFS	// a4 := Xthal_vpri_enabled 
+	l32i	a4, a2, XTHAL_VPRI_ENABLED_OFS	// a4 := Xthal_vpri_enabled
 	bgeu	a3, a5, xthal_vpri_lock_done
 
 	//  xthal_set_intenable( Xthal_vpri_enablemap[0][Xthal_vpri_locklevel] & Xthal_vpri_enabled );
@@ -640,7 +640,7 @@ xthal_vpri_unlock:
 	movi	a2, Xthal_vpri_state		 // a2 := address of global var. Xthal_vpri_state
 	//interlock
 	l8ui	a3, a2, XTHAL_VPRI_VPRI_OFS      // a3 := Xthal_vpri_level == Xthal_vpri_state.vpri
-	l32i	a4, a2, XTHAL_VPRI_ENABLED_OFS	 // a4 := Xthal_vpri_enabled 
+	l32i	a4, a2, XTHAL_VPRI_ENABLED_OFS	 // a4 := Xthal_vpri_enabled
 	addx4	a3, a3, a2                       // a3 := a2 + a3*4  (index into enablemap[] array)
 	l32i	a3, a3, XTHAL_VPRI_ENABLEMAP_OFS // a3 := Xthal_vpri_enablemap[0][Xthal_vpri_level]
 	//interlock

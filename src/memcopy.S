@@ -253,7 +253,7 @@ xthal_memcpy:
 	ret
 #else
 	retw
-#endif	
+#endif
 
 
 	//  void xthal_copy123(dst, src, len);
@@ -388,12 +388,12 @@ cdone:	abi_return		// return dst
 	ssa8t	a4		// shift to end of modified destination (length)
 	srcel	a3, a6, a3	// combine early-dst+source with late-dst to form last word
 	s32i	a3, a5, 0	// update last word
-.Ldone:	
+.Ldone:
 #ifdef __XTENSA_CALL0_ABI__
 	l32i    a12, a1, SAVE_A12
 	addi    sp, sp, STKSIZE
 	ret
 #else
 	retw
-#endif	
+#endif
 

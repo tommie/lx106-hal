@@ -1,4 +1,4 @@
-// 
+//
 // debug.c - debug related constants and functions
 //
 // $Id: //depot/rel/Boreal/Xtensa/OS/hal/debug.c#2 $

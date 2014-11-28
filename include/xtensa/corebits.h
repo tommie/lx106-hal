@@ -143,7 +143,7 @@
 #define MESR_DME_SHIFT		1
 #define MESR_RCE		0x00000010	/* recorded memory error */
 #define MESR_RCE_SHIFT		4
-#define MESR_LCE		
+#define MESR_LCE
 #define MESR_LCE_SHIFT		?
 #define MESR_LCE_L
 #define MESR_ERRENAB		0x00000100
