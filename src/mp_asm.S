@@ -1,4 +1,4 @@
-// 
+//
 // mp_asm.S - multi-processor synchronization routines
 //
 // $Id$

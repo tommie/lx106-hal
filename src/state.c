@@ -1,4 +1,4 @@
-// 
+//
 // processor_state.c - processor state management routines
 //
 
@@ -181,7 +181,7 @@ xthal_init_mem_extra(void *address)
     while( ptr < end )
     {
 	*ptr++ = 0;
-    } 
+    }
 }
 
 #elif defined(__SPLIT__init_mem_cp)
@@ -192,14 +192,14 @@ xthal_init_mem_cp(void *address, int cp)
     unsigned int *ptr;
     unsigned int *end;
 
-    if( cp <= 7 ) 
+    if( cp <= 7 )
     {
 	end = (unsigned int *)((int)address + Xthal_cpregs_size[cp]);
 	ptr = (unsigned int *)address;
 	while( ptr < end )
 	{
 	    *ptr++ = 0;
-	} 
+	}
     }
 }
 

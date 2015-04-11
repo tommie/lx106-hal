@@ -1,4 +1,4 @@
-// 
+//
 // mmu.c - MMU related functions
 //
 // $Id: //depot/rel/Boreal/Xtensa/OS/hal/mmu.c#2 $

@@ -94,7 +94,7 @@
  *
  *  (Internal macro.)
  *  Returns value of CACHEATTR register (or closest equivalent) in a2.
- *  
+ *
  *  Entry:
  *	(none)
  *  Exit:
