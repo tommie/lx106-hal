@@ -45,7 +45,7 @@ splittable_sources = \
 # The name of our generated split source files.
 # Used for CLEANFILES.
 
-split_sources = $(shell cd $(top_srcdir)/src && awk -F '[()]' ' \
+split_sources = $(shell cd $(top_srcdir)/src && $(AWK) -F '[()]' ' \
 	/^\#.* defined\(__SPLIT__(\w+)\)/ { \
 		sub(/__SPLIT__/, ""); \
 		f = FILENAME; \
@@ -67,7 +67,7 @@ endif
 
 .DELETE_ON_ERROR: %.splittmp
 %-split.mk: % Makefile
-	sort "$<" | uniq | awk -F '[()]' ' \
+	sort "$<" | uniq | $(AWK) -F '[()]' ' \
 		$(awk_ignore_nw) \
 		/^#.* defined\(__SPLIT__(\w+)\)/ { \
 			tag = $$2; \
