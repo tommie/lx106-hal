@@ -1,4 +1,4 @@
-# Copyright (c) 2014 The ESP8266 Community
+# Copyright (c) 2014-2015 Tommie Gannert
 #
 # See the LICENSE file.
 #
