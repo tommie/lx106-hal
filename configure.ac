@@ -13,7 +13,7 @@ AC_CONFIG_HEADERS([src/config.h])
 
 AC_CANONICAL_HOST
 
-CFLAGS="${CFLAGS:+$CFLAGS }-mlongcalls"
+CFLAGS="${CFLAGS:+$CFLAGS }-mlongcalls -fno-use-linker-plugin"
 LDFLAGS="${LDFLAGS:+$LDFLAGS }-nostdlib"
 
 AM_PROG_AS
