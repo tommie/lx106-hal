@@ -4,7 +4,7 @@
 # See the LICENSE file.
 #
 
-AC_PREREQ([2.69])
+AC_PREREQ([2.68])
 AC_INIT([lx106-hal], [rc-2010.1])
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([foreign])
