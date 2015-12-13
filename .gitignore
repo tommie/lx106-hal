@@ -3,10 +3,8 @@
 /autom4te.cache/
 /build-aux/
 /configure
-/include/Makefile.in
 /Makefile.in
 /src/config.h.in
-/src/Makefile.in
 
 # configure
 .deps/
@@ -21,6 +19,7 @@ stamp-h1
 *.S
 *-split.mk
 *--*.c
+.dirstamp
 libhal.a
 
 # make dist*

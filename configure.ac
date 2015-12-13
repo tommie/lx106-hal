@@ -7,7 +7,7 @@
 AC_PREREQ([2.69])
 AC_INIT([lx106-hal], [rc-2010.1])
 AC_CONFIG_AUX_DIR([build-aux])
-AM_INIT_AUTOMAKE([foreign])
+AM_INIT_AUTOMAKE([foreign subdir-objects])
 AC_CONFIG_SRCDIR([src/attribute.c])
 AC_CONFIG_HEADERS([src/config.h])
 
@@ -32,8 +32,4 @@ AM_CONDITIONAL([XTENSA_CALL0_ABI], [test x$call0_abi = xyes])
 
 CPPFLAGS="${CPPFLAGS:+$CPPFLAGS }-I\${top_srcdir}/include"
 
-AC_OUTPUT([
-	Makefile
-	include/Makefile
-	src/Makefile
-])
+AC_OUTPUT([Makefile])
