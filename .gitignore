@@ -1,15 +1,29 @@
-*.a
-*.o
-Makefile
-Makefile.in
-.deps/
-
+# autoreconf
 /aclocal.m4
 /autom4te.cache/
 /build-aux/
-/config.log
-/config.status
 /configure
-/src/config.h
+/include/Makefile.in
+/Makefile.in
 /src/config.h.in
-/src/stamp-h1
+/src/Makefile.in
+
+# configure
+.deps/
+config.h
+config.log
+config.status
+Makefile
+stamp-h1
+
+# make all
+*.o
+*.S
+*-split.mk
+*--*.c
+libhal.a
+
+# make dist*
+lx106-hal-*.shar.gz
+lx106-hal-*.tar.*
+lx106-hal-*.zip
