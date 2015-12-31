@@ -78,8 +78,8 @@ endif
 			print "\techo \"#define " $$2 "\" >\"$$@.splittmp\""; \
 			print "\techo \"#include \\\"$<\\\"\" >>\"$$@.splittmp\""; \
 			print "\tmv \"$$@.splittmp\" \"$$@\""; \
-			print "libhal.a: " srcbase "--" tag ".o"; \
-			print "libhal_a_OBJECTS += " srcbase "--" tag ".o"; \
+			print "libhal.a: " srcbase "--" tag ".$$(OBJEXT)"; \
+			print "libhal_a_OBJECTS += " srcbase "--" tag ".$$(OBJEXT)"; \
 		}' >"$@.splittmp"
 	mv "$@.splittmp" "$@"
 
